@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\bin\RTOSDemo.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\bin\RTOSDemo.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Sun Mar 21 15:09:40 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Sun Mar 21 14:45:01 2021
 <BR><P>
 <H3>Maximum Stack Usage =        144 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -240,8 +240,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[c]"></a>Keyboard</STRONG> (Thumb, 182 bytes, Stack size 0 bytes, keyboard.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 124 + Unknown Stack Size
-<LI>Call Chain = Keyboard &rArr; Servo_Wait &rArr; xQueueGenericSend &rArr; vTaskPlaceOnEventList &rArr; prvAddCurrentTaskToDelayedList &rArr; vListInsert
+<BR><BR>[Stack]<UL><LI>Max Depth = 116 + Unknown Stack Size
+<LI>Call Chain = Keyboard &rArr; ServoGoTo &rArr; xQueueGenericSend &rArr; vTaskPlaceOnEventList &rArr; prvAddCurrentTaskToDelayedList &rArr; vListInsert
 </UL>
 <BR>[Calls]<UL><LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
 <LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Servo_Wait
@@ -265,15 +265,14 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ServoAutomat
 </UL>
 
-<P><STRONG><a name="[d]"></a>ServoAutomat</STRONG> (Thumb, 232 bytes, Stack size 40 bytes, servo.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 124 + Unknown Stack Size
+<P><STRONG><a name="[d]"></a>ServoAutomat</STRONG> (Thumb, 206 bytes, Stack size 32 bytes, servo.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 116 + Unknown Stack Size
 <LI>Call Chain = ServoAutomat &rArr; xQueueReceive &rArr; vTaskPlaceOnEventList &rArr; prvAddCurrentTaskToDelayedList &rArr; vListInsert
 </UL>
 <BR>[Calls]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod (via Veneer)
 <LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceive
 <LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eReadDetector
 <LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
-<LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8 (via Veneer)
 <LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LedStepLeft
 <LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LedStepRight
 </UL>
@@ -283,8 +282,8 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ServoInit
 </UL>
 
-<P><STRONG><a name="[2b]"></a>ServoCallib</STRONG> (Thumb, 28 bytes, Stack size 24 bytes, servo.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 116 + Unknown Stack Size
+<P><STRONG><a name="[2b]"></a>ServoCallib</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, servo.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 108 + Unknown Stack Size
 <LI>Call Chain = ServoCallib &rArr; xQueueGenericSend &rArr; vTaskPlaceOnEventList &rArr; prvAddCurrentTaskToDelayedList &rArr; vListInsert
 </UL>
 <BR>[Calls]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
@@ -293,7 +292,7 @@ Global Symbols
 <LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ServoInit
 </UL>
 
-<P><STRONG><a name="[22]"></a>ServoInit</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, servo.o(.text))
+<P><STRONG><a name="[22]"></a>ServoInit</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, servo.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136 + Unknown Stack Size
 <LI>Call Chain = ServoInit &rArr; xTaskCreate &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
@@ -306,8 +305,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[2c]"></a>ServoGoTo</STRONG> (Thumb, 36 bytes, Stack size 32 bytes, servo.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 124 + Unknown Stack Size
+<P><STRONG><a name="[2c]"></a>ServoGoTo</STRONG> (Thumb, 30 bytes, Stack size 24 bytes, servo.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 116 + Unknown Stack Size
 <LI>Call Chain = ServoGoTo &rArr; xQueueGenericSend &rArr; vTaskPlaceOnEventList &rArr; prvAddCurrentTaskToDelayedList &rArr; vListInsert
 </UL>
 <BR>[Calls]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
@@ -315,8 +314,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Keyboard
 </UL>
 
-<P><STRONG><a name="[2e]"></a>Servo_Wait</STRONG> (Thumb, 36 bytes, Stack size 32 bytes, servo.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 124 + Unknown Stack Size
+<P><STRONG><a name="[2e]"></a>Servo_Wait</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, servo.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 100 + Unknown Stack Size
 <LI>Call Chain = Servo_Wait &rArr; xQueueGenericSend &rArr; vTaskPlaceOnEventList &rArr; prvAddCurrentTaskToDelayedList &rArr; vListInsert
 </UL>
 <BR>[Calls]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
@@ -324,8 +323,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Keyboard
 </UL>
 
-<P><STRONG><a name="[2d]"></a>Servo_Speed</STRONG> (Thumb, 36 bytes, Stack size 32 bytes, servo.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 124 + Unknown Stack Size
+<P><STRONG><a name="[2d]"></a>Servo_Speed</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, servo.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 100 + Unknown Stack Size
 <LI>Call Chain = Servo_Speed &rArr; xQueueGenericSend &rArr; vTaskPlaceOnEventList &rArr; prvAddCurrentTaskToDelayedList &rArr; vListInsert
 </UL>
 <BR>[Calls]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
@@ -1023,7 +1022,6 @@ Global Symbols
 <P><STRONG><a name="[2a]"></a>__ARM_common_switch8</STRONG> (ARM, 32 bytes, Stack size 0 bytes, keyboard.o(i.__ARM_common_switch8))
 <BR><BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskGenericNotifyFromISR (via Veneer)
 <LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskGenericNotify (via Veneer)
-<LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ServoAutomat (via Veneer)
 <LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Keyboard (via Veneer)
 </UL>
 <P>

@@ -4,7 +4,7 @@ F (.\main.c)(0x605634D5)(--thumb -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interw
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\FreeRTOS.h)(0x5FD90663)
 I (C:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7FD94)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7\FreeRTOSConfig.h)(0x605731C4)
+I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7_basic\FreeRTOSConfig.h)(0x6057326E)
 I (C:\Keil\ARM\Inc\Philips\lpc21xx.h)(0x51C7FF8C)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\projdefs.h)(0x5FD90663)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\portable.h)(0x5FD90663)
@@ -13,23 +13,23 @@ I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\portable\RVDS\
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\mpu_wrappers.h)(0x5FD90663)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\task.h)(0x5FD90663)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\list.h)(0x5FD90663)
-I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7\keyboard.h)(0x5CF0F46F)
-I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7\servo.h)(0x605742CE)
+I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7_basic\keyboard.h)(0x5CF0F46F)
+I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7_basic\servo.h)(0x60563C5F)
 F (.\led.c)(0x604D02E0)(--thumb -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I. -I..\..\Source\portable\RVDS\ARM7_LPC21xx -I..\Common\include -I..\..\Source\include-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-DARM7_LPC21xx_KEIL_RVDS -DKEIL_THUMB_INTERWORK -o .\bin\led.o --omf_browse .\bin\led.crf --depend .\bin\led.d)
 I (C:\Keil\ARM\Inc\Philips\LPC21xx.H)(0x51C7FF8C)
-I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7\led.h)(0x604D023C)
+I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7_basic\led.h)(0x604D023C)
 F (.\uart.c)(0x604D0C54)(--thumb -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I. -I..\..\Source\portable\RVDS\ARM7_LPC21xx -I..\Common\include -I..\..\Source\include-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-DARM7_LPC21xx_KEIL_RVDS -DKEIL_THUMB_INTERWORK -o .\bin\uart.o --omf_browse .\bin\uart.crf --depend .\bin\uart.d)
 I (C:\Keil\ARM\Inc\Philips\LPC210X.H)(0x51C7FF8C)
-I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7\uart.h)(0x5FF3396A)
-I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7\string.h)(0x5FCF3A32)
+I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7_basic\uart.h)(0x5FF3396A)
+I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7_basic\string.h)(0x5FCF3A32)
 F (.\string.c)(0x5FF1D172)(--thumb -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I. -I..\..\Source\portable\RVDS\ARM7_LPC21xx -I..\Common\include -I..\..\Source\include-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-DARM7_LPC21xx_KEIL_RVDS -DKEIL_THUMB_INTERWORK -o .\bin\string.o --omf_browse .\bin\string.crf --depend .\bin\string.d)
-I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7\string.h)(0x5FCF3A32)
-F (.\keyboard.c)(0x60573AEE)(--thumb -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I. -I..\..\Source\portable\RVDS\ARM7_LPC21xx -I..\Common\include -I..\..\Source\include-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-DARM7_LPC21xx_KEIL_RVDS -DKEIL_THUMB_INTERWORK -o .\bin\keyboard.o --omf_browse .\bin\keyboard.crf --depend .\bin\keyboard.d)
+I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7_basic\string.h)(0x5FCF3A32)
+F (.\keyboard.c)(0x6057327D)(--thumb -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I. -I..\..\Source\portable\RVDS\ARM7_LPC21xx -I..\Common\include -I..\..\Source\include-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-DARM7_LPC21xx_KEIL_RVDS -DKEIL_THUMB_INTERWORK -o .\bin\keyboard.o --omf_browse .\bin\keyboard.crf --depend .\bin\keyboard.d)
 I (C:\Keil\ARM\Inc\Philips\LPC21xx.H)(0x51C7FF8C)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\FreeRTOS.h)(0x5FD90663)
 I (C:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7FD94)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7\FreeRTOSConfig.h)(0x605731C4)
+I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7_basic\FreeRTOSConfig.h)(0x6057326E)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\projdefs.h)(0x5FD90663)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\portable.h)(0x5FD90663)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\deprecated_definitions.h)(0x5FD90663)
@@ -37,34 +37,34 @@ I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\portable\RVDS\
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\mpu_wrappers.h)(0x5FD90663)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\task.h)(0x5FD90663)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\list.h)(0x5FD90663)
-I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7\keyboard.h)(0x5CF0F46F)
-I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7\servo.h)(0x605742CE)
-F (.\servo.c)(0x60574D7A)(--thumb -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I. -I..\..\Source\portable\RVDS\ARM7_LPC21xx -I..\Common\include -I..\..\Source\include-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-DARM7_LPC21xx_KEIL_RVDS -DKEIL_THUMB_INTERWORK -o .\bin\servo.o --omf_browse .\bin\servo.crf --depend .\bin\servo.d)
+I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7_basic\keyboard.h)(0x5CF0F46F)
+I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7_basic\servo.h)(0x60563C5F)
+F (.\servo.c)(0x6057102D)(--thumb -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I. -I..\..\Source\portable\RVDS\ARM7_LPC21xx -I..\Common\include -I..\..\Source\include-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-DARM7_LPC21xx_KEIL_RVDS -DKEIL_THUMB_INTERWORK -o .\bin\servo.o --omf_browse .\bin\servo.crf --depend .\bin\servo.d)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\FreeRTOS.h)(0x5FD90663)
 I (C:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7FD94)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7\FreeRTOSConfig.h)(0x605731C4)
+I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7_basic\FreeRTOSConfig.h)(0x6057326E)
 I (C:\Keil\ARM\Inc\Philips\lpc21xx.h)(0x51C7FF8C)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\projdefs.h)(0x5FD90663)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\portable.h)(0x5FD90663)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\deprecated_definitions.h)(0x5FD90663)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\portable\RVDS\ARM7_LPC21xx\portmacro.h)(0x5FD90663)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\mpu_wrappers.h)(0x5FD90663)
-I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7\servo.h)(0x605742CE)
+I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7_basic\servo.h)(0x60563C5F)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\queue.h)(0x5FD90663)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\task.h)(0x5FD90663)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\list.h)(0x5FD90663)
-I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7\led.h)(0x604D023C)
+I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7_basic\led.h)(0x604D023C)
 F (.\timer_interrupts.c)(0x604FB50B)(--thumb -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I. -I..\..\Source\portable\RVDS\ARM7_LPC21xx -I..\Common\include -I..\..\Source\include-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-DARM7_LPC21xx_KEIL_RVDS -DKEIL_THUMB_INTERWORK -o .\bin\timer_interrupts.o --omf_browse .\bin\timer_interrupts.crf --depend .\bin\timer_interrupts.d)
 I (C:\Keil\ARM\Inc\Philips\LPC21xx.H)(0x51C7FF8C)
-I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7\timer_interrupts.h)(0x604FB34A)
+I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7_basic\timer_interrupts.h)(0x604FB34A)
 F (..\..\Source\tasks.c)(0x5FD90664)(--thumb -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I. -I..\..\Source\portable\RVDS\ARM7_LPC21xx -I..\Common\include -I..\..\Source\include-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-DARM7_LPC21xx_KEIL_RVDS -DKEIL_THUMB_INTERWORK -o .\bin\tasks.o --omf_browse .\bin\tasks.crf --depend .\bin\tasks.d)
 I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7FD94)
 I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C7FD94)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\FreeRTOS.h)(0x5FD90663)
 I (C:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7FD94)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7\FreeRTOSConfig.h)(0x605731C4)
+I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7_basic\FreeRTOSConfig.h)(0x6057326E)
 I (C:\Keil\ARM\Inc\Philips\lpc21xx.h)(0x51C7FF8C)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\projdefs.h)(0x5FD90663)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\portable.h)(0x5FD90663)
@@ -80,7 +80,7 @@ I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7FD94)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\FreeRTOS.h)(0x5FD90663)
 I (C:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7FD94)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7\FreeRTOSConfig.h)(0x605731C4)
+I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7_basic\FreeRTOSConfig.h)(0x6057326E)
 I (C:\Keil\ARM\Inc\Philips\lpc21xx.h)(0x51C7FF8C)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\projdefs.h)(0x5FD90663)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\portable.h)(0x5FD90663)
@@ -94,7 +94,7 @@ I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C7FD94)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\FreeRTOS.h)(0x5FD90663)
 I (C:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7FD94)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7\FreeRTOSConfig.h)(0x605731C4)
+I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7_basic\FreeRTOSConfig.h)(0x6057326E)
 I (C:\Keil\ARM\Inc\Philips\lpc21xx.h)(0x51C7FF8C)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\projdefs.h)(0x5FD90663)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\portable.h)(0x5FD90663)
@@ -109,7 +109,7 @@ I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7FD94)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\FreeRTOS.h)(0x5FD90663)
 I (C:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7FD94)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7\FreeRTOSConfig.h)(0x605731C4)
+I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7_basic\FreeRTOSConfig.h)(0x6057326E)
 I (C:\Keil\ARM\Inc\Philips\lpc21xx.h)(0x51C7FF8C)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\projdefs.h)(0x5FD90663)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\portable.h)(0x5FD90663)
@@ -123,7 +123,7 @@ I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7FD94)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\FreeRTOS.h)(0x5FD90663)
 I (C:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7FD94)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7\FreeRTOSConfig.h)(0x605731C4)
+I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Exercises\Servo_4.2.2_7_basic\FreeRTOSConfig.h)(0x6057326E)
 I (C:\Keil\ARM\Inc\Philips\lpc21xx.h)(0x51C7FF8C)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\projdefs.h)(0x5FD90663)
 I (C:\Users\Rejmi\Documents\STUDIA\S6\aghmtmwzpsw\FreeRTOS\Source\include\portable.h)(0x5FD90663)

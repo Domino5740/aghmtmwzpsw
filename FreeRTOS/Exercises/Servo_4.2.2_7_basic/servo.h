@@ -2,13 +2,11 @@ enum DetectorState {
 	ACTIVE, INACTIVE
 };
 
-enum ServoState {CALLIB, IDLE, IN_PROGRESS, WAIT, STEP_DELAY};
+enum ServoState {CALLIB, IDLE, IN_PROGRESS};
 struct Servo {
 	enum ServoState eState;
 	unsigned int uiCurrentPosition;
 	unsigned int uiDesiredPosition;
-	unsigned int uiServoWaitTicks;
-	unsigned int uiServoStepDelay;
 };
 
 void DetectorInit(void);
@@ -17,5 +15,5 @@ void ServoInit(unsigned int *uiServoFrequency);
 void ServoCallib(void);
 void ServoGoTo(unsigned int uiPosition);
 void ServoAutomat(void *pvParameters);
-void Servo_Wait(unsigned int uiServoWaitTicks);
+void Servo_Wait(unsigned int uiServoSeqDelay);
 void Servo_Speed(unsigned int uiServoStepDelay);

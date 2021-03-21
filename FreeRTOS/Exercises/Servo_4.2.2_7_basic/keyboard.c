@@ -9,7 +9,7 @@
 #define S2_bm (1<<5)
 #define S3_bm (1<<7)
 
-void Keyboard (void *pvParameters) {
+void Keyboard (void *pvParameters){
 	
 	enum eKeyboardState eKeyboardLastState;
 	
@@ -27,7 +27,7 @@ void Keyboard (void *pvParameters) {
 					break;
 					case BUTTON_1: ServoGoTo(50);
 					break;
-					case BUTTON_2:
+					case BUTTON_2: 
 						Servo_Speed(8);
 						ServoGoTo(12);
 						Servo_Speed(4);

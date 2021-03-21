@@ -8,21 +8,22 @@
 #define DETECTOR_bm (1<<10)
 
 xQueueHandle xsServoQueue;
+xQueueHandle xServoWaitQueue;
+xQueueHandle xServoSpeedQueue;
 
 void ServoAutomat(void *pvParameters) {
 	
 	struct Servo sServo;
 	struct Servo sServoReceived;
+	unsigned int uiServoSeqDelay = 0;
+	unsigned int uiServoStepDelay = 0;
 	unsigned int uiDelay = (1000 / *(unsigned int*)pvParameters);
 	
 	sServo.eState = IDLE;
-	sServo.uiServoStepDelay = 0;
-	sServo.uiServoWaitTicks = 0;
 	
 	while(1) {
 		switch(sServo.eState) {
 			case IN_PROGRESS:
-				sServo.eState = STEP_DELAY;
 				if(sServo.uiCurrentPosition < sServo.uiDesiredPosition) {
 					LedStepRight();
 					sServo.uiCurrentPosition++;
@@ -34,35 +35,26 @@ void ServoAutomat(void *pvParameters) {
 				else {
 					sServo.eState = IDLE;
 				}
+				vTaskDelay(uiServoStepDelay);
 			break;
 			case IDLE:
 				if(xQueueReceive(xsServoQueue, &sServoReceived, 10) == pdTRUE) {
+					sServo.uiDesiredPosition = sServoReceived.uiDesiredPosition;
 					sServo.eState = sServoReceived.eState;
-					if(sServoReceived.eState == STEP_DELAY) {
-						sServo.uiServoStepDelay = sServoReceived.uiServoStepDelay;
-					}
-					else if(sServoReceived.eState == IN_PROGRESS) {
-						sServo.uiDesiredPosition = sServoReceived.uiDesiredPosition;
-					}
-					else if(sServoReceived.eState == WAIT) {
-						sServo.uiServoWaitTicks = sServoReceived.uiServoWaitTicks;
-					}
 				}
-			break;
-			case WAIT:
-				vTaskDelay(sServo.uiServoWaitTicks);
-				sServo.eState = IDLE;
-			break;
-			case STEP_DELAY:
-				vTaskDelay(sServo.uiServoStepDelay);
-				sServo.eState = IN_PROGRESS;
+				xQueueReceive(xServoSpeedQueue, &uiServoStepDelay, 10);
+				if(xQueueReceive(xServoWaitQueue, &uiServoSeqDelay, 10) == pdTRUE) {
+					vTaskDelay(uiServoSeqDelay);
+				}
+				else {
+					uiServoSeqDelay = 0;
+				}
 			break;
 			case CALLIB:
 				if(eReadDetector() == ACTIVE) {
 					sServo.eState = IDLE;
 					sServo.uiCurrentPosition = 0;
 					sServo.uiDesiredPosition = 0;
-					sServo.uiServoStepDelay = 0;
 				}
 				else {
 					LedStepLeft();
@@ -90,44 +82,35 @@ moze nastapic wywlaszczenie i przejscie do innego watku podczas pracy na zmienne
 w wyniku czego np otrzymujemy bzdurna wartosc, gdy inny watek podmieni nam uiDesiredPosition na inna*/
 
 void ServoInit(unsigned int *uiServoFrequency) {
-	xsServoQueue = xQueueCreate(100, sizeof(struct Servo));
+	xsServoQueue = xQueueCreate(10, sizeof(struct Servo));
+	xServoWaitQueue = xQueueCreate(10, sizeof(unsigned int));
+	xServoSpeedQueue = xQueueCreate(10, sizeof(unsigned int));
 	
 	LedInit();
 	DetectorInit();
-	ServoCallib();
 	xTaskCreate(ServoAutomat, NULL, 128, uiServoFrequency, 1, NULL);
+	ServoCallib();
 }
 
 void ServoCallib() {
-	struct Servo sServoToSend;
+	struct Servo sServo;
 	
-	sServoToSend.eState = CALLIB;
-	xQueueSendToBack(xsServoQueue, &sServoToSend, 10);
+	sServo.eState = CALLIB;
+	xQueueSendToBack(xsServoQueue, &sServo, 100);
 }
 
 void ServoGoTo(unsigned int uiPosition) {
-	struct Servo sServoToSend;
+	struct Servo sServo;
 	
-	sServoToSend.uiDesiredPosition = uiPosition;
-	sServoToSend.eState = IN_PROGRESS;
-	xQueueSendToBack(xsServoQueue, &sServoToSend, 10);
+	sServo.uiDesiredPosition = uiPosition;
+	sServo.eState = IN_PROGRESS;
+	xQueueSendToBack(xsServoQueue, &sServo, 100);
 }
 
-void Servo_Wait(unsigned int uiServoWaitTicks) {
-
-	struct Servo sServoToSend;
-	
-	sServoToSend.eState = WAIT;
-	sServoToSend.uiServoWaitTicks = uiServoWaitTicks;
-	xQueueSendToBack(xsServoQueue, &sServoToSend, 10);
+void Servo_Wait(unsigned int uiServoSeqDelay) {
+	xQueueSendToBack(xServoWaitQueue, &uiServoSeqDelay, 100);
 }
 
 void Servo_Speed(unsigned int uiServoStepDelay) {
-	
-	struct Servo sServoToSend;
-	
-	sServoToSend.eState = STEP_DELAY;
-	sServoToSend.uiServoStepDelay = uiServoStepDelay;
-	
-	xQueueSendToBack(xsServoQueue, &sServoToSend, 10);
+	xQueueSendToBack(xServoSpeedQueue, &uiServoStepDelay, 100);
 }
