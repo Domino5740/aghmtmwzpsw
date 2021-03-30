@@ -36,7 +36,7 @@ void ServoAutomat(void *pvParameters) {
 				}
 			break;
 			case IDLE:
-				if(xQueueReceive(xsServoQueue, &sServoReceived, 10) == pdTRUE) {
+				if(xQueueReceive(xsServoQueue, &sServoReceived, portMAX_DELAY) == pdTRUE) {
 					sServo.eState = sServoReceived.eState;
 					if(sServoReceived.eState == STEP_DELAY) {
 						sServo.uiServoStepDelay = sServoReceived.uiServoStepDelay;
@@ -102,7 +102,7 @@ void ServoCallib() {
 	struct Servo sServoToSend;
 	
 	sServoToSend.eState = CALLIB;
-	xQueueSendToBack(xsServoQueue, &sServoToSend, 10);
+	xQueueSendToBack(xsServoQueue, &sServoToSend, 0);
 }
 
 void ServoGoTo(unsigned int uiPosition) {
@@ -110,7 +110,7 @@ void ServoGoTo(unsigned int uiPosition) {
 	
 	sServoToSend.uiDesiredPosition = uiPosition;
 	sServoToSend.eState = IN_PROGRESS;
-	xQueueSendToBack(xsServoQueue, &sServoToSend, 10);
+	xQueueSendToBack(xsServoQueue, &sServoToSend, 0);
 }
 
 void Servo_Wait(unsigned int uiServoWaitTicks) {
@@ -119,7 +119,8 @@ void Servo_Wait(unsigned int uiServoWaitTicks) {
 	
 	sServoToSend.eState = WAIT;
 	sServoToSend.uiServoWaitTicks = uiServoWaitTicks;
-	xQueueSendToBack(xsServoQueue, &sServoToSend, 10);
+	
+	xQueueSendToBack(xsServoQueue, &sServoToSend, 0);
 }
 
 void Servo_Speed(unsigned int uiServoStepDelay) {
@@ -129,5 +130,5 @@ void Servo_Speed(unsigned int uiServoStepDelay) {
 	sServoToSend.eState = STEP_DELAY;
 	sServoToSend.uiServoStepDelay = uiServoStepDelay;
 	
-	xQueueSendToBack(xsServoQueue, &sServoToSend, 10);
+	xQueueSendToBack(xsServoQueue, &sServoToSend, 0);
 }

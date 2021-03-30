@@ -3,7 +3,7 @@
 #include "keyboard.h"
 #include "servo.h"
 
-int main(void){
+int main(void) {
 	
 	unsigned int uiServoFrequency = 200;
 	
