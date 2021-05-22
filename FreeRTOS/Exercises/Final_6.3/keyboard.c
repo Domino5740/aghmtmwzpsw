@@ -58,9 +58,7 @@ enum KeyboardState eKeyboardRead(void) {
 	
 	enum KeyboardState eKeyboardState;
 	
-	if(xQueueReceive(xKeyboardQueue, &eKeyboardState, 0) == pdFALSE) {
-		eKeyboardState = RELEASED;
-	}
+	xQueueReceive(xKeyboardQueue, &eKeyboardState, portMAX_DELAY);
 	
 	return eKeyboardState;
 }

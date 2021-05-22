@@ -1,0 +1,53 @@
+Toa = (8 * ( 1B + 5B address + payload + 1B CRC) + 9b) / 2000 kbps
+Toa = 35,6us
+Tul = (8b * payload)/SPI data rate = 9,76 us
+
+SPI_clk = 32M / 4(default prescaler) = 8Mhz
+SPI data rate = SPI_clk / 10 = 0,8Mbps = 819,2kbps
+
+Tsb = Tul + 2* Tstandby + Toa = 10us + 260us + 35,6us = 305,6us
+Tstandby = 130us chyba
+
+Toa = 321b/2000kbps = 156,73us
+Tul = 0,3125ms
+Tsb = 469,23us
+
+320B po 1B = 97,792ms
+320B po 32B = 4,6923ms
+
+prądy:
+4) bez modułów: 1276 - 1458uA
+z modułami 3.98 - 4.2 mA
+dioda OFF - ON
+
+
+5) bez modułów: 684 - 885uA
+z modułami: 3.42 - 3.6mA
+różnica = ~600uA
+
+6) bez ACC:
+a) 4.70mA
+b) 4.69mA
+
+bez modułów:
+a)1281uA
+b)686uA
+
+7)
+a)bez modułów: 1.4mA
+b)1-225uA(225 w momencie świecenia diody) - miernik przy tak krótkim okresie mierzy 112uA
+CR 2032: energizer avg 225mAh
+pobór średnio 12,2uA
+225mAh / 12,2uA ~= 2,1 roku
+
+8) bez ACC
+a) 33uA -> podczas wysyłki 60uA, jednak średnio to jakieś 33,034uA ~ 33uA
+225mAh / 33uA = 40,58 tygodnia
+b) 225mAh/150uA = 62,5 dnia
+
+sam mikro:
+a)1uA: 225mAh / 1uA = 25,68 lat
+b)30uA: 225mAh / 30uA = 44,64 tygodni
+
+9)all in: 225mAh / 345uA = 27 dni
+sam mikro: 225mAh / 61uA = 21 tygodni

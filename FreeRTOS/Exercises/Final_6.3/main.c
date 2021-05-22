@@ -41,7 +41,6 @@ void KeyboardThread( void *pvParameters ) {
 			AppendString(cHexStr, cStringToBeSend);
 			xQueueSendToBack(xEventQueue, &cStringToBeSend, portMAX_DELAY);
 		}
-		vTaskDelay(20);
 	}
 }
 
