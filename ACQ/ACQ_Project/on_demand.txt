@@ -1,0 +1,32 @@
+1.6) jakieś 13-14
+po ovesamplingu 3
+
+2.1.
+1)
+jaka część zakresu: 1324 - 1181 = 143
+143/4095 * 100% = 3,492%
+
+3)
+370-100 = 270
+270/2048 * 100% = 13,183% zakresu górnego, całości 2x mniej
+
+4)370 - 20 = 350
+350/2048 * 100% = 17,089% zakresu górnego, całości 2x mniej
+x8 gain
+1580 - (-1152) = 2732
+2732/4095 * 100% = 66,716%
+x16 gain
+wykracza poza zakres górny
+
+2.2.
+2) Vref1 = 1.73
+Vref2 = 1.57
+4)
+1100mV/2048 = 0,53711mV LSB
+z odczytu z labview: 0,53711mV LSB
+2.4.
+1080g: -0,383 -> +4,442 = 4,825
+
+2.4.
+pomiary: 1080g = 1086g
+telefon 205.3g - 205.3gg
