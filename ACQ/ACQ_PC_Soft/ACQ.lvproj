@@ -11,8 +11,11 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="1_OnDemand.vi" Type="VI" URL="../1_OnDemand.vi"/>
+		<Item Name="2_OnInterrupts.vi" Type="VI" URL="../2_OnInterrupts.vi"/>
+		<Item Name="2_OnInterrupts_Raw_Slow.vi" Type="VI" URL="../2_OnInterrupts_Raw_Slow.vi"/>
 		<Item Name="3_IRQ_50ksps.vi" Type="VI" URL="../3_IRQ_50ksps.vi"/>
 		<Item Name="4_DMA_1Msps.vi" Type="VI" URL="../4_DMA_1Msps.vi"/>
+		<Item Name="4_DMA_Mem2Mem.vi" Type="VI" URL="../4_DMA_Mem2Mem.vi"/>
 		<Item Name="Prezentacja_OnDemand_.vi" Type="VI" URL="../Prezentacja_OnDemand_.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">

@@ -7,6 +7,10 @@ Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "UART", "UART\UART.cproj", "
 EndProject
 Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "ADC", "ADC\ADC.cproj", "{5D1FD86A-EDF6-4D10-8AB4-358873D6CFA2}"
 EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "ADC_OnInterrupts", "ADC_OnInterrupts\ADC_OnInterrupts.cproj", "{573DEE7A-858A-4BF5-B989-B8B392234B4D}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "ADC_OnDMA", "ADC_OnDMA\ADC_OnDMA.cproj", "{D24E8D16-200F-496D-94BD-5A9C279943B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|AVR = Debug|AVR
@@ -25,6 +29,14 @@ Global
 		{5D1FD86A-EDF6-4D10-8AB4-358873D6CFA2}.Debug|AVR.Build.0 = Debug|AVR
 		{5D1FD86A-EDF6-4D10-8AB4-358873D6CFA2}.Release|AVR.ActiveCfg = Release|AVR
 		{5D1FD86A-EDF6-4D10-8AB4-358873D6CFA2}.Release|AVR.Build.0 = Release|AVR
+		{573DEE7A-858A-4BF5-B989-B8B392234B4D}.Debug|AVR.ActiveCfg = Debug|AVR
+		{573DEE7A-858A-4BF5-B989-B8B392234B4D}.Debug|AVR.Build.0 = Debug|AVR
+		{573DEE7A-858A-4BF5-B989-B8B392234B4D}.Release|AVR.ActiveCfg = Release|AVR
+		{573DEE7A-858A-4BF5-B989-B8B392234B4D}.Release|AVR.Build.0 = Release|AVR
+		{D24E8D16-200F-496D-94BD-5A9C279943B6}.Debug|AVR.ActiveCfg = Debug|AVR
+		{D24E8D16-200F-496D-94BD-5A9C279943B6}.Debug|AVR.Build.0 = Debug|AVR
+		{D24E8D16-200F-496D-94BD-5A9C279943B6}.Release|AVR.ActiveCfg = Release|AVR
+		{D24E8D16-200F-496D-94BD-5A9C279943B6}.Release|AVR.Build.0 = Release|AVR
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

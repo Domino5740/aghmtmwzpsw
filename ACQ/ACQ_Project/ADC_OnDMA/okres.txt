@@ -1,0 +1,11 @@
+10k próbek na okres
+fs = 1M
+T_fs = 1us
+10k próbek = 10ms
+F_signal = 100Hz
+
+
+sam sinus
+816 - 790 = 26
+T_sin = 26us
+F_sin = 38,46kHz

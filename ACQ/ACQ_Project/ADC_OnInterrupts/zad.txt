@@ -1,0 +1,3 @@
+8.
+napięcie do 3.3V podaje, nasyca się przy 950 mV
+dla vref 3.3V przy 2.75V
